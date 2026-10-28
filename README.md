@@ -1,5 +1,7 @@
 
-# Chadeaux 1K-01
+# NAME: Matthew Bruce
+# MONIKER: Chadeaux
+# CALLSIGN: 1K-01
 
 ### `CicadaUnit` · Cybersecurity · Offensive Security · Systems Engineering
 
