@@ -156,7 +156,9 @@ use APIs and usage tracking.
 
 A project evolving from offline-first archival and mapping work, focused
 on bringing useful resources and services together in a self-hosted
-environment.
+environment. In the form of a fully modular cyberdeck with full off-grid
+mindset and easy swap parts and peices, designed in a bullet proof manner of operation
+and function. No matter what life throws at it>
 
 -   Worked on project organization and deployment.
 -   Integrated self-hosted services and investigated map/tile and
@@ -182,7 +184,8 @@ own mistakes, explain findings clearly, and finish what I start.
 My long-term direction is **penetration testing and red-team work**,
 supported by strong systems and networking fundamentals. I'm focused on
 turning conceptual knowledge into repeatable practical ability through
-labs, CTFs, projects, and structured training.
+labs, CTFs, projects, Home-Lab Hardening in a realistic messy
+ environment and structured training.
 
 I'm especially interested in opportunities where curiosity,
 troubleshooting, documentation, and hands-on technical work are
@@ -203,8 +206,7 @@ valued---and where I can keep learning from experienced practitioners.
 
 ## Connect
 
-The best way to explore my work is through the repositories on this
-profile.
+The best way to explore my work that I choose to share is through this rabbit hole repo. 
 
 -   **GitHub:** [@Cicada-Unit](https://github.com/Cicada-Unit)
 -   **Interests:** Ethical hacking · Offensive security · Linux ·
@@ -212,6 +214,6 @@ profile.
 
 ------------------------------------------------------------------------
 
-::: {align="center"}
+
 *Build. Break safely. Understand. Improve.*
-:::
+
