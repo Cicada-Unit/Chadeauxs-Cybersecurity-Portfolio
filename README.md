@@ -1,4 +1,4 @@
-::: {align="center"}
+
 # Chadeaux 1K-01
 
 ### `CicadaUnit` · Cybersecurity · Offensive Security · Systems Engineering
@@ -7,9 +7,11 @@
 work---and how to make them work better.**
 
 [![GitHub](https://img.shields.io/badge/GitHub-CicadaUnit-181717?style=for-the-badge&logo=github)](https://github.com/Cicada-Unit)
+
 [![Focus](https://img.shields.io/badge/Focus-Ethical%20Hacking-8A2BE2?style=for-the-badge&logo=kalilinux&logoColor=white)](#cybersecurity--learning)
+
 [![Systems](https://img.shields.io/badge/Systems-Linux%20%7C%20Docker%20%7C%20Self--Hosted-3C873A?style=for-the-badge&logo=linux&logoColor=white)](#technical-toolkit)
-:::
+
 
 ------------------------------------------------------------------------
 
