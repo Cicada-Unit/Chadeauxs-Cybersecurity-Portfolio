@@ -2,9 +2,9 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li><a href="#Practical-Technical-Experience-—-Homelab Design-Deployment-and-Administration">Practical Technical Experience — Homelab Design, Deployment, and Administration</a></li>
+    <li><a href="#Practical-Technical-Experience--Homelab Design-Deployment-and-Administration">Practical Technical Experience — Homelab Design, Deployment, and Administration</a></li>
     <li><a href="#Lead-Pharmacy-Technician--Store-Trainer-Professional-Experience-and-Cybersecurity-Transferable-Skills">Lead Pharmacy Technician & Store Trainer: Professional Experience and Cybersecurity Transferable Skills</a></li>
-    <li><a href="#Eagle-Scout-—-Leadership-Service-and-Long-Term-Commitment">Eagle Scout — Leadership, Service, and Long-Term Commitment</a></li>
+    <li><a href="#Eagle-Scout--Leadership-Service-and-Long-Term-Commitment">Eagle Scout — Leadership, Service, and Long-Term Commitment</a></li>
 
   </ol>
 </details>
