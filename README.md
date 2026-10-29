@@ -21,7 +21,7 @@ work---and how to make them work better.**
   <ol>
     <li><a href="#about-me">About Me</a></li>
     <li><a href="#certifications--training">Certifications & Training</a></li>
-    <li><a href="#Contributing">Contributing</a></li>
+    <li><a href="#Technical-Toolkit">Technical Toolkit</a></li>
     <li><a href="#Version-History">Version History</a></li>
     <li><a href="#Contact">Contact</a></li>
     <li><a href="#Acknowledgments">Acknowledgments</a></li>
