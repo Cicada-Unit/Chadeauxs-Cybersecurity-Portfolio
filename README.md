@@ -19,7 +19,7 @@ work---and how to make them work better.**
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li><a href="##About-Me">Description</a></li>
+    <li><a href="##about-me">About Me</a></li>
     <li><a href="#getting-started">Getting Started</a></li>
     <li><a href="#Contributing">Contributing</a></li>
     <li><a href="#Version-History">Version History</a></li>
