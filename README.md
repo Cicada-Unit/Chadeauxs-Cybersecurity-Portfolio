@@ -19,7 +19,7 @@ work---and how to make them work better.**
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li><a href="##_About_Me">Description</a></li>
+    <li><a href="##About-Me">Description</a></li>
     <li><a href="#getting-started">Getting Started</a></li>
     <li><a href="#Contributing">Contributing</a></li>
     <li><a href="#Version-History">Version History</a></li>
@@ -29,7 +29,7 @@ work---and how to make them work better.**
 </details>
 ------------------------------------------------------------------------
 
-## About Me
+##About-Me
 
 I'm a hands-on technologist with a strong interest in **cybersecurity,
 offensive security, Linux systems, self-hosted infrastructure, and
