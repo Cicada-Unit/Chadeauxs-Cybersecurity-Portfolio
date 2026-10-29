@@ -22,9 +22,9 @@ work---and how to make them work better.**
     <li><a href="#about-me">About Me</a></li>
     <li><a href="#certifications--training">Certifications & Training</a></li>
     <li><a href="#Technical-Toolkit">Technical Toolkit</a></li>
-    <li><a href="#Version-History">Version History</a></li>
-    <li><a href="#Contact">Contact</a></li>
-    <li><a href="#Acknowledgments">Acknowledgments</a></li>
+    <li><a href="#Selected-Projects--Practical-Work">Selected Projects & Practical Work</a></li>
+    <li><a href="#Connect">Connect</a></li>
+    <li><a href="#How-I-Work">How I Work</a></li>
   </ol>
 </details>
 ------------------------------------------------------------------------
