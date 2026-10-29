@@ -5,6 +5,7 @@
     <li><a href="#Practical-Technical-Experience--Homelab Design-Deployment-and-Administration">Practical Technical Experience — Homelab Design, Deployment, and Administration</a></li>
     <li><a href="#Lead-Pharmacy-Technician--Store-Trainer-Professional-Experience-and-Cybersecurity-Transferable-Skills">Lead Pharmacy Technician & Store Trainer: Professional Experience and Cybersecurity Transferable Skills</a></li>
     <li><a href="#Eagle-Scout--Leadership-Service-and-Long-Term-Commitment">Eagle Scout — Leadership, Service, and Long-Term Commitment</a></li>
+    <li><a href="#Security-Monitoring-and-Vulnerability-Assessment-Wazuh-and-Tenable-Nessus">Security Monitoring and Vulnerability Assessment — Wazuh and Tenable Nessus</a></li>
 
   </ol>
 </details>
@@ -203,6 +204,138 @@ Potential next steps for expanding the homelab's security value include:
 7. **Authorized security labs:** Use isolated targets and purpose-built vulnerable applications to practice reconnaissance, vulnerability validation, and reporting without risking household services.
 
 These improvements would allow the homelab to serve not only as an infrastructure project but also as a progressively more structured environment for learning defensive security and authorized offensive testing.
+
+
+## Security Monitoring and Vulnerability Assessment — Wazuh and Tenable Nessus
+
+### Overview
+
+As part of developing and operating my personal homelab, I have worked with Wazuh and Tenable Nessus to gain practical familiarity with two important areas of cybersecurity: security monitoring and vulnerability assessment.
+
+These tools approach security from complementary perspectives. Wazuh provides security monitoring and endpoint visibility, including log analysis, detection capabilities, configuration assessment, and vulnerability detection. Nessus is primarily a vulnerability scanner used to discover security weaknesses, missing patches, and misconfigurations across systems and applications.
+
+Working with these tools in a homelab environment has helped me understand how security teams move beyond simply operating infrastructure toward actively evaluating its security posture.
+
+### 1. Wazuh — Security Monitoring and Detection
+
+Wazuh is an open-source security platform with SIEM and extended detection and response capabilities. Its components collect and analyze security-related information from monitored endpoints, helping administrators investigate events and identify potential security issues.
+
+My use of Wazuh has introduced me to the defensive side of cybersecurity and the importance of maintaining visibility into the systems that make up an environment.
+
+Key learning areas include:
+
+- **Security event monitoring:** Understanding how endpoint and system activity can provide evidence of potentially suspicious behavior.
+- **Log analysis:** Recognizing the importance of collecting, interpreting, and correlating system events.
+- **Endpoint visibility:** Understanding how monitored hosts contribute information about their software, configuration, and security state.
+- **Vulnerability awareness:** Learning how endpoint inventory can be compared with vulnerability intelligence to identify known software weaknesses.
+- **Alert investigation:** Recognizing that alerts require interpretation, contextual analysis, and validation rather than automatic assumptions that an incident has occurred.
+- **Defensive security operations:** Developing familiarity with the concepts behind continuous monitoring, detection, investigation, and remediation.
+
+Wazuh has helped me appreciate that a security monitoring platform is valuable only when its data can be interpreted meaningfully. Effective analysis requires understanding normal system behavior, recognizing anomalies, evaluating alert context, and determining what action is justified by the available evidence.
+
+### 2. Tenable Nessus — Vulnerability Assessment
+
+Tenable Nessus provides vulnerability assessment capabilities that help identify weaknesses in network-accessible systems and installed software.
+
+Using Nessus in my homelab has helped me explore the vulnerability-assessment process from the perspective of an administrator responsible for understanding and improving the security of an environment.
+
+Relevant learning areas include:
+
+- **Asset discovery:** Understanding the importance of identifying systems that may need to be assessed.
+- **Vulnerability scanning:** Learning how scanners evaluate targets for known weaknesses and potential misconfigurations.
+- **Finding interpretation:** Reviewing scan results and understanding that a reported finding must be evaluated in context.
+- **Risk prioritization:** Considering severity, exposure, exploitability, and the importance of the affected system.
+- **Remediation planning:** Connecting identified weaknesses with practical corrective actions such as patching, configuration changes, or reducing unnecessary exposure.
+- **Verification:** Recognizing the importance of reassessing a system after remediation to determine whether the original issue remains.
+
+An important lesson is that a scanner's output is not the same as a completed penetration test. Automated scanning can identify potential weaknesses, but professional assessment still requires validation, contextual reasoning, and clear reporting.
+
+### 3. Understanding the Difference Between Detection and Assessment
+
+Using both tools has helped me distinguish two related but different cybersecurity functions.
+
+| Capability | Wazuh | Tenable Nessus |
+|---|---|---|
+| Primary purpose | Security monitoring and detection | Vulnerability assessment |
+| Typical focus | Events, endpoint state, and potential security threats | Known vulnerabilities, exposed services, and misconfigurations |
+| Main question | What is happening on the monitored system, and does it warrant investigation? | What weaknesses may exist on the assessed system? |
+| Typical output | Security alerts, event information, and monitoring findings | Scan findings, vulnerability details, and assessment reports |
+| Defensive value | Supports investigation and security visibility | Supports vulnerability prioritization and remediation |
+
+These tools are complementary rather than interchangeable. Vulnerability scanning helps identify weaknesses that should be addressed, while security monitoring helps provide visibility into events that may indicate suspicious activity or a change in system state.
+
+Neither tool independently guarantees that a system is secure or that every attack will be detected.
+
+### 4. Connecting Findings to Remediation
+
+A valuable part of security work is moving from identifying a potential problem to understanding what should happen next.
+
+A practical vulnerability-management workflow can include:
+
+1. Identify the asset and understand its role.
+2. Collect relevant vulnerability or security-monitoring information.
+3. Review the finding and assess its reliability.
+4. Determine the potential impact and priority.
+5. Apply an appropriate corrective action when authorized.
+6. Reassess the system or review subsequent monitoring data.
+7. Document the result and any remaining risk.
+
+This workflow reinforces the relationship between technical tools, operational decisions, and security outcomes.
+
+It also demonstrates why security work requires more than running a scan or collecting alerts. The results must be interpreted and translated into appropriate action.
+
+### 5. Relevance to Penetration Testing and Red-Team Development
+
+My primary career objective is penetration testing and red-team work, but understanding defensive tools is an important part of becoming a well-rounded security professional.
+
+Learning how defenders identify vulnerabilities and monitor systems provides context for understanding how weaknesses may be discovered, prioritized, and investigated.
+
+This experience supports my development in several areas:
+
+- Understanding how defenders inventory and assess systems.
+- Recognizing the difference between an automated finding and a validated vulnerability.
+- Learning how security events can provide investigative evidence.
+- Appreciating the importance of system baselines and normal behavior.
+- Understanding how remediation can reduce an attack surface.
+- Improving my ability to explain findings from both offensive and defensive perspectives.
+
+For penetration testing, this knowledge can help me produce more meaningful reports by connecting technical findings to realistic risk and practical remediation. For security operations, it provides an introduction to the monitoring and vulnerability-management processes used to maintain visibility and reduce exposure.
+
+### 6. Practical Value of the Homelab
+
+Using these tools within a personally operated infrastructure environment makes the learning more concrete than studying the concepts in isolation.
+
+The homelab provides a context in which systems have real configurations, software dependencies, network connections, and operational requirements. Security tools must be configured to observe or assess the intended assets, and their results must be interpreted alongside an understanding of how those systems are supposed to operate.
+
+This experience supports the development of practical habits such as:
+
+- Investigating findings rather than accepting them uncritically.
+- Distinguishing detection from confirmation.
+- Understanding that a vulnerability's importance depends on context.
+- Considering how security changes affect system availability.
+- Treating monitoring and vulnerability management as ongoing processes.
+- Documenting findings and corrective actions.
+
+The environment remains a personal learning and testing environment, rather than a claim of professional SOC employment or enterprise security administration.
+
+### 7. Professional Portfolio Summary
+
+> Gained hands-on familiarity with Wazuh and Tenable Nessus within a self-hosted homelab environment. Explored the complementary roles of security monitoring and vulnerability assessment, including endpoint visibility, event analysis, vulnerability discovery, finding interpretation, risk prioritization, and remediation concepts. This experience supports my ongoing development in cybersecurity by connecting infrastructure administration with practical defensive security workflows.
+
+### 8. Resume-Ready Bullets
+
+- Used Wazuh in a personal homelab to develop familiarity with security monitoring, endpoint visibility, event analysis, and defensive security concepts.
+- Used Tenable Nessus in a homelab environment to explore vulnerability scanning, assessment findings, and remediation-oriented risk analysis.
+- Developed an understanding of the complementary roles of security monitoring and vulnerability assessment in maintaining system security.
+- Built practical awareness of the importance of validating findings, prioritizing risk, and reassessing systems after corrective actions.
+
+### References
+
+- [Wazuh Documentation — Platform Capabilities](https://documentation.wazuh.com/current/)
+- [Wazuh — Vulnerability Detection](https://documentation.wazuh.com/current/user-manual/capabilities/vulnerability-detection/index.html)
+- [Tenable Nessus — Official Product Overview](https://www.tenable.com/products/nessus)
+- [Tenable Nessus — Official Documentation](https://docs.tenable.com/Nessus.htm)
+
 
 
 # Lead Pharmacy Technician & Store Trainer: Professional Experience and Cybersecurity Transferable Skills
