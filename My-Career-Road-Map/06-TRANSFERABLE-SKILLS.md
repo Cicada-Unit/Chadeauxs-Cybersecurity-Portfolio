@@ -5,7 +5,7 @@
     <li><a href="#Practical-Technical-Experience--Homelab Design-Deployment-and-Administration">Practical Technical Experience — Homelab Design, Deployment, and Administration</a></li>
     <li><a href="#Lead-Pharmacy-Technician--Store-Trainer-Professional-Experience-and-Cybersecurity-Transferable-Skills">Lead Pharmacy Technician & Store Trainer: Professional Experience and Cybersecurity Transferable Skills</a></li>
     <li><a href="#Eagle-Scout--Leadership-Service-and-Long-Term-Commitment">Eagle Scout — Leadership, Service, and Long-Term Commitment</a></li>
-    <li><a href="#Security-Monitoring-and-Vulnerability-Assessment-Wazuh-and-Tenable-Nessus">Security Monitoring and Vulnerability Assessment — Wazuh and Tenable Nessus</a></li>
+    <li><a href="#Security-Monitoring-and-Vulnerability-Assessment--Wazuh-and-Tenable-Nessus">Security Monitoring and Vulnerability Assessment — Wazuh and Tenable Nessus</a></li>
 
   </ol>
 </details>
