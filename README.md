@@ -15,7 +15,18 @@ work---and how to make them work better.**
 
 [![Systems](https://img.shields.io/badge/Systems-Linux%20%7C%20Docker%20%7C%20Self--Hosted-3C873A?style=for-the-badge&logo=linux&logoColor=white)](#technical-toolkit)
 
-
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href="##_About_Me">Description</a></li>
+    <li><a href="#getting-started">Getting Started</a></li>
+    <li><a href="#Contributing">Contributing</a></li>
+    <li><a href="#Version-History">Version History</a></li>
+    <li><a href="#Contact">Contact</a></li>
+    <li><a href="#Acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 ------------------------------------------------------------------------
 
 ## About Me
