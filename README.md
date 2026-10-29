@@ -8,6 +8,7 @@
 **Curious by nature. Practical by design. Always learning how systems
 work---and how to make them work better.**
 </div
+
 [![GitHub](https://img.shields.io/badge/GitHub-CicadaUnit-181717?style=for-the-badge&logo=github)](https://github.com/Cicada-Unit)
 
 [![Focus](https://img.shields.io/badge/Focus-Ethical%20Hacking-8A2BE2?style=for-the-badge&logo=kalilinux&logoColor=white)](#cybersecurity--learning)
