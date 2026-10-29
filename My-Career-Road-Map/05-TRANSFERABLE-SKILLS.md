@@ -1,3 +1,200 @@
+## Practical Technical Experience — Homelab Design, Deployment, and Administration
+
+### Overview
+
+My homelab serves as a practical environment for learning infrastructure administration, networking, containerized services, storage management, access control, service monitoring, and self-hosted application deployment.
+
+Rather than relying exclusively on coursework or isolated exercises, I have designed and assembled a small, multi-node environment that supports services used by my household. This creates opportunities to work with real configuration decisions, interconnected services, operational dependencies, troubleshooting, and ongoing maintenance.
+
+The environment combines a custom 10-inch network rack, a managed network switch, multiple Raspberry Pi systems, Docker-based applications, and a separate laptop used as the main administrative workstation.
+
+The goal is not simply to run individual applications. It is to build an organized environment in which services work together, users have appropriate access, and the infrastructure remains understandable and maintainable.
+
+### 1. Infrastructure Design and Network Organization
+
+I designed a compact infrastructure layout centered around a custom 10-inch rack and a managed network switch. The network distributes connectivity and, where supported, Power over Ethernet (PoE) to connected devices. An additional unmanaged switch extends connectivity for part of the environment, while the higher-power NAS uses a separate power arrangement.
+
+This setup has provided practical exposure to:
+
+- Physical infrastructure planning and cable organization.
+- Network-device interconnection and topology.
+- Managed versus unmanaged switching.
+- Power requirements and PoE considerations.
+- Separating administrative access from ordinary service use.
+- Understanding how physical connectivity affects service availability.
+
+Building a physical environment reinforces that infrastructure is more than software configuration. Power, cabling, network links, device placement, and hardware limitations all influence reliability.
+
+### 2. Multi-Node Raspberry Pi Environment
+
+The homelab uses three Raspberry Pi nodes with distinct responsibilities.
+
+#### Node 1 — Raspberry Pi 5: Storage and Media Services
+
+This node provides network-attached storage and related household services.
+
+The configuration includes:
+
+- OpenMediaVault for storage administration.
+- A RAID 6 storage arrangement.
+- Samba/SMB network file sharing.
+- Individual user accounts and access separation for household members.
+- A container-based image backup service for family device backups.
+- Jellyfin for self-hosted media streaming with individual accounts.
+
+This node provides practical experience with storage architecture, network shares, user permissions, media services, and backup workflows.
+
+It also highlights an important operational distinction: RAID can help maintain storage availability after certain drive failures, but it does not replace independent backups. Recovery planning requires considering accidental deletion, corruption, hardware failure, and other scenarios that RAID alone cannot address.
+
+#### Node 2 — Raspberry Pi 4B: Service Dashboard and DNS Filtering
+
+This node hosts a Homepage dashboard that acts as a centralized portal for accessing household services and shared bookmarks.
+
+The environment also uses two weather APIs to provide weather information through the dashboard and runs a primary Pi-hole DNS filtering instance.
+
+This setup provides practical exposure to:
+
+- Deploying and configuring self-hosted web applications.
+- Creating a central service-access interface.
+- Integrating information from APIs.
+- Managing DNS-based filtering.
+- Maintaining blocklists and understanding their effect on DNS resolution.
+- Making infrastructure services accessible through a more user-friendly interface.
+
+Pi-hole provides a practical introduction to DNS behavior and the role of DNS filtering in reducing access to known unwanted or potentially malicious destinations. Its effectiveness depends on configuration, list quality, and the limits of DNS-level filtering.
+
+#### Node 3 — Raspberry Pi 4B: Help Desk and Secondary DNS
+
+The third node hosts Zammad, an open-source help-desk and ticketing platform, alongside a secondary Pi-hole instance.
+
+Zammad provides a structured way to record questions, requests, issues, and bugs instead of relying entirely on informal conversations.
+
+The second Pi-hole uses a different subset of filtering lists and provides an additional filtering instance. This offers experience with maintaining multiple service instances and considering how network services can be distributed across devices.
+
+A secondary DNS instance does not automatically guarantee failover or high availability. Client configuration, DNS settings, and service health must also be considered.
+
+### 3. Containerization and Service Management
+
+Docker is a central component of the environment. I use containerized services to organize applications, manage deployment configurations, and separate application workloads.
+
+Multiple Portainer instances help administer container environments and provide a graphical interface for managing services.
+
+This has provided practical experience with:
+
+- Container deployment and configuration.
+- Service ports and network exposure.
+- Environment variables and persistent application data.
+- Container lifecycle management.
+- Troubleshooting startup and runtime failures.
+- Understanding dependencies between applications and infrastructure.
+- Managing several services without installing every application directly onto the host operating system.
+
+Working with self-hosted services also requires considering application updates, persistent storage, credentials, exposed ports, and the consequences of changing a configuration that other services depend on.
+
+### 4. Identity, Access Control, and Privacy
+
+The homelab supports multiple household users and services. Storage shares and applications are configured with individual accounts where appropriate, helping keep users' files and service access separated.
+
+This provides a practical context for understanding:
+
+- Account management.
+- Permission boundaries.
+- The principle of least privilege.
+- Service-specific access controls.
+- The importance of protecting credentials.
+- The difference between network reachability and authorized access.
+
+Access controls must be tested rather than assumed to be effective. A properly designed environment should make it possible to verify that a user can access the resources intended for them without gaining unnecessary access to another user's information or administrative functions.
+
+### 5. Troubleshooting and Operational Maintenance
+
+Operating a multi-service environment creates practical troubleshooting scenarios that cannot always be resolved by following a single tutorial.
+
+An application may fail because of a configuration issue, a port conflict, a missing dependency, an unavailable network service, a permissions problem, or an underlying hardware or operating-system issue.
+
+Maintaining the environment has encouraged a methodical approach:
+
+1. Identify the observable failure.
+2. Gather relevant logs and configuration information.
+3. Separate symptoms from possible causes.
+4. Test plausible explanations.
+5. Apply a controlled change.
+6. Verify the result.
+7. Document what changed when useful.
+
+This approach is directly relevant to systems administration and cybersecurity, where accurate diagnosis is more useful than making repeated unverified changes.
+
+### 6. Security-Relevant Lessons
+
+The homelab is a practical learning environment, but operating services does not automatically make an environment secure. Security requires deliberate configuration, validation, maintenance, and an understanding of the system's exposure.
+
+The environment provides a foundation for continuing to study:
+
+- Network segmentation and service isolation.
+- DNS filtering and its limitations.
+- Authentication and authorization.
+- Secure remote administration.
+- Container and host security.
+- Credential management.
+- Log collection and troubleshooting.
+- Backup and recovery procedures.
+- Patch management and configuration hygiene.
+- Availability and service dependencies.
+
+The most important lesson is that security is an ongoing process. A service that works correctly is not necessarily configured securely, and a configuration that is secure today may need to change as the environment evolves.
+
+### 7. Connection to Cybersecurity and Red-Team Development
+
+This environment provides a useful bridge between theoretical security concepts and the practical operation of real systems.
+
+Understanding how services are deployed, connected, authenticated, and maintained helps explain why certain vulnerabilities matter and how they may affect other components.
+
+My homelab experience supports continued development in several areas:
+
+| Technical area | Practical relevance |
+|---|---|
+| Linux and service administration | Understanding host systems, processes, permissions, and configuration. |
+| Networking | Understanding connectivity, DNS, switching, and service exposure. |
+| Docker and container management | Learning application deployment, isolation, persistence, and service dependencies. |
+| Storage and backups | Understanding data availability, access controls, and recovery considerations. |
+| Identity and permissions | Recognizing the importance of account separation and least privilege. |
+| Application troubleshooting | Investigating logs, errors, configuration, and dependencies. |
+| Infrastructure security | Evaluating how systems are exposed and how defensive controls can reduce risk. |
+| Technical documentation | Recording architecture, configuration decisions, and operational procedures. |
+
+For penetration testing, this knowledge helps establish a stronger understanding of the systems being assessed. For defensive roles, it supports practical familiarity with infrastructure operations and the consequences of configuration errors.
+
+The environment is not presented as a production enterprise network or as proof of professional penetration-testing experience. It is a personally designed and operated lab that provides continuing hands-on experience.
+
+### 8. Professional Portfolio Summary
+
+> Designed, deployed, and maintained a multi-node homelab built around a custom compact network rack, managed switching, Raspberry Pi systems, Docker-based services, and centralized administration. Operated self-hosted storage and media services, Samba/SMB file sharing, device backup workflows, a household service dashboard, DNS filtering, and a help-desk platform. Developed practical experience in Linux administration, container deployment, networking, access control, storage, troubleshooting, and service maintenance.
+
+### 9. Resume-Ready Bullets
+
+- Designed and maintained a multi-node Raspberry Pi homelab with managed networking, centralized administration, and containerized services.
+- Deployed and administered self-hosted services including OpenMediaVault, Samba/SMB file sharing, Jellyfin, Homepage, Pi-hole, and Zammad.
+- Configured individual user accounts and access separation for household file-sharing and application services.
+- Managed Docker-based deployments and used Portainer to administer containerized workloads.
+- Developed hands-on familiarity with DNS filtering, network services, application troubleshooting, and infrastructure dependencies.
+- Implemented a household storage and backup environment while developing awareness of RAID limitations, independent backup requirements, and recovery planning.
+- Applied iterative troubleshooting to diagnose service and configuration problems across Linux-based infrastructure.
+
+### 10. Future Development Opportunities
+
+Potential next steps for expanding the homelab's security value include:
+
+1. **Network segmentation:** Separate administrative devices, household clients, servers, and exposed services into appropriately controlled network zones.
+2. **Centralized logging:** Collect relevant system and application logs to support troubleshooting and security monitoring.
+3. **Vulnerability management:** Establish a routine for inventorying services, applying updates, and documenting known weaknesses.
+4. **Backup validation:** Test recovery procedures and maintain independent copies of important data.
+5. **Access-control testing:** Verify user permissions and service exposure from the perspective of different accounts and network locations.
+6. **Monitoring and alerting:** Introduce tools that help identify service failures and suspicious activity.
+7. **Authorized security labs:** Use isolated targets and purpose-built vulnerable applications to practice reconnaissance, vulnerability validation, and reporting without risking household services.
+
+These improvements would allow the homelab to serve not only as an infrastructure project but also as a progressively more structured environment for learning defensive security and authorized offensive testing.
+
+
 # Lead Pharmacy Technician & Store Trainer: Professional Experience and Cybersecurity Transferable Skills
 
 ## Overview
@@ -204,6 +401,73 @@ For penetration testing in particular, the next step is to continue building pra
 My pharmacy background represents a foundation of transferable professional experience, while my cybersecurity coursework and technical projects demonstrate the direction of my career development.
 
 I intend to build on both: retaining the discipline, accountability, and collaborative habits developed through years of pharmacy work while continuing to strengthen my practical security-assessment skills.
+
+## Eagle Scout — Leadership, Service, and Long-Term Commitment
+
+**Achievement:** Eagle Scout  
+**Year Earned:** 2018  
+**Organization:** Scouting America (formerly the Boy Scouts of America)
+
+### Overview
+
+Earning the rank of Eagle Scout in 2018 represents a significant personal achievement built on years of participation, advancement, learning, and commitment to the principles of Scouting.
+
+Unlike an accomplishment earned through a single examination or short-term course, Eagle Scout represents sustained effort toward a long-term goal. It requires a Scout to progress through established advancement requirements, demonstrate leadership and responsibility, serve others, and complete an Eagle Scout service project.
+
+For me, this achievement represents more than a title. It reflects a foundation of perseverance, accountability, service, and personal development established over an extended period of time.
+
+### Long-Term Commitment and Perseverance
+
+Reaching Eagle Scout requires maintaining progress toward a demanding goal while balancing other responsibilities. The achievement reflects the ability to work toward defined standards over time rather than relying solely on short bursts of motivation.
+
+This mindset is relevant to cybersecurity, where developing competence requires continuous study, repeated practice, troubleshooting, and the willingness to learn from failure.
+
+Security professionals must often work through complex problems that do not have immediate solutions. Persistence, structured learning, and a willingness to keep improving are essential qualities when investigating vulnerabilities or developing new technical skills.
+
+### Leadership and Accountability
+
+Scouting emphasizes leadership through responsibility, preparation, cooperation, and service.
+
+These principles translate into professional environments where individuals must communicate clearly, contribute to a team, follow through on commitments, and accept responsibility for their decisions.
+
+In cybersecurity, technical ability is only one component of effective performance. Teams also depend on people who document their work, respect authorization boundaries, communicate risks, and act responsibly when unexpected problems arise.
+
+### Service and Community Responsibility
+
+A central principle of Eagle Scout is service to others. The achievement reflects an understanding that leadership is not solely about individual advancement; it also involves contributing to something beyond oneself.
+
+That principle aligns with the responsible practice of cybersecurity. Security work protects systems, information, services, and the people who depend on them. Ethical security professionals use their knowledge within authorized boundaries and consider the consequences their actions may have on others.
+
+### Planning and Project Execution
+
+The Eagle Scout advancement process includes demonstrating leadership and completing a qualifying service project. The project component provides experience with organizing work toward a defined objective and accepting responsibility for its completion.
+
+Those general project-management principles are useful in technical work, including planning infrastructure deployments, coordinating tasks, maintaining documentation, and troubleshooting projects through completion.
+
+This does not imply that the Eagle Scout project itself was a cybersecurity project; its relevance is the transferable experience of working toward an objective with responsibility and structure.
+
+### Relevance to Cybersecurity
+
+The qualities represented by this achievement complement my technical development in several areas:
+
+- **Persistence:** Continuing through difficult technical problems and unfamiliar concepts.
+- **Discipline:** Maintaining progress toward long-term learning and career goals.
+- **Accountability:** Taking responsibility for decisions, results, and commitments.
+- **Leadership:** Contributing to teams and helping others work toward shared objectives.
+- **Service:** Applying knowledge in ways that benefit others.
+- **Ethical responsibility:** Recognizing that capability must be paired with sound judgment.
+- **Project execution:** Organizing work around defined requirements and a desired outcome.
+
+### Professional Portfolio Summary
+
+> Earned the rank of Eagle Scout in 2018, reflecting sustained commitment, leadership development, service, and personal accountability. The achievement represents a long-term investment in perseverance and responsible leadership—qualities I continue to apply to professional development, technical projects, and my pursuit of a career in cybersecurity.
+
+### Personal Significance
+
+Eagle Scout is a milestone that represents years of effort rather than a single moment of success. It serves as evidence of an early commitment to personal growth, service, and responsibility.
+
+As I continue developing my career in cybersecurity, I view those principles as a foundation for the professional I intend to become: someone who continues learning, follows through on difficult work, supports others, and uses technical knowledge responsibly.
+
 
 The objective is to become a cybersecurity professional who can investigate technical problems methodically, communicate findings clearly, respect operational constraints, and contribute reliably to a team.
 
