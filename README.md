@@ -15,6 +15,12 @@ work---and how to make them work better.**
 
 [![Systems](https://img.shields.io/badge/Systems-Linux%20%7C%20Docker%20%7C%20Self--Hosted-3C873A?style=for-the-badge&logo=linux&logoColor=white)](#technical-toolkit)
 
+![Dashboard Preview](/Home-Lab-Environment/5.png)
+![Dashboard Preview](/Home-Lab-Environment/6.png)
+![Dashboard Preview](/Home-Lab-Environment/7.png)
+![Dashboard Preview](/Home-Lab-Environment/8.png)
+
+
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
