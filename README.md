@@ -22,7 +22,7 @@ work---and how to make them work better.**
 
 
 <!-- TABLE OF CONTENTS -->
-<details>
+
   <summary>Table of Contents</summary>
   <ol>
     <li><a href="#about-me">About Me</a></li>
@@ -32,7 +32,7 @@ work---and how to make them work better.**
     <li><a href="#Connect">Connect</a></li>
     <li><a href="#How-I-Work">How I Work</a></li>
   </ol>
-</details>
+
 ------------------------------------------------------------------------
 
 ##About-Me
